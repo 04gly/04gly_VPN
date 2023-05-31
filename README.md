@@ -17,12 +17,12 @@ bảng xray hỗ trợ đa giao thức và nhiều người dùng
 # Cài đặt & Nâng cấp
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/04gly/04gly_vpn/master/install.sh)
 ```
 
 ## Cài đặt & nâng cấp thủ công
 
-1. Trước tiên hãy tải xuống gói nén mới nhất từ ​​https://github.com/vaxilu/x-ui/releases, thường chọn kiến ​​trúc `amd64`
+1. Trước tiên hãy tải xuống gói nén mới nhất từ ​​https://github.com/04gly/04gly_vpn/releases, thường chọn kiến ​​trúc `amd64`
 2. Sau đó tải gói nén lên thư mục `/root/` của máy chủ và sử dụng người dùng `root` để đăng nhập vào máy chủ
 
 > Nếu kiến ​​trúc cpu máy chủ của bạn không phải là `amd64`, hãy thay thế `amd64` trong lệnh bằng kiến ​​trúc khác
@@ -130,14 +130,4 @@ Trước tiên, hãy cài đặt phiên bản x-ui mới nhất trên máy chủ
 
 > Sau khi di chuyển thành công, vui lòng `đóng v2-ui` và `khởi động lại x-ui`, nếu không, đầu vào của v2-ui và đầu vào của x-ui sẽ tạo ra `xung đột cổng`
 
-```
-x-ui v2-ui
-```
 
-## sự cố đã đóng
-
-Tất cả các loại vấn đề màu trắng xem huyết áp cao
-
-## Stargazers theo thời gian
-
-[![Người ngắm sao theo thời gian](https://starchart.cc/vaxilu/x-ui.svg)](https://starchart.cc/vaxilu/x-ui)
