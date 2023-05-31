@@ -120,7 +120,7 @@ install_x-ui() {
         fi
     else
         last_version=$1
-        url="https://github.com/04gly/04gly_VPN/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz"
+        url="https://github.com/04gly/04gly_VPN/releases/download/pn1/x-ui-linux-amd64.tar.gz"
         echo -e "Bắt đầu cài đặt x-ui v$1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
