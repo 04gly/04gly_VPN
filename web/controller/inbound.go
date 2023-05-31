@@ -59,7 +59,7 @@ func (a *InboundController) addInbound(c *gin.Context) {
 	inbound := &model.Inbound{}
 	err := c.ShouldBind(inbound)
 	if err != nil {
-		jsonMsg(c, "添加", err)
+		jsonMsg(c, "Thêm vào", err)
 		return
 	}
 	user := session.GetLoginUser(c)
@@ -67,7 +67,7 @@ func (a *InboundController) addInbound(c *gin.Context) {
 	inbound.Enable = true
 	inbound.Tag = fmt.Sprintf("inbound-%v", inbound.Port)
 	err = a.inboundService.AddInbound(inbound)
-	jsonMsg(c, "添加", err)
+	jsonMsg(c, "Thêm vào", err)
 	if err == nil {
 		a.xrayService.SetToNeedRestart()
 	}
@@ -76,11 +76,11 @@ func (a *InboundController) addInbound(c *gin.Context) {
 func (a *InboundController) delInbound(c *gin.Context) {
 	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil {
-		jsonMsg(c, "删除", err)
+		jsonMsg(c, "Thêm vào", err)
 		return
 	}
 	err = a.inboundService.DelInbound(id)
-	jsonMsg(c, "删除", err)
+	jsonMsg(c, "Thêm vào", err)
 	if err == nil {
 		a.xrayService.SetToNeedRestart()
 	}
@@ -89,7 +89,7 @@ func (a *InboundController) delInbound(c *gin.Context) {
 func (a *InboundController) updateInbound(c *gin.Context) {
 	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil {
-		jsonMsg(c, "修改", err)
+		jsonMsg(c, "Lưu lại", err)
 		return
 	}
 	inbound := &model.Inbound{
@@ -97,11 +97,11 @@ func (a *InboundController) updateInbound(c *gin.Context) {
 	}
 	err = c.ShouldBind(inbound)
 	if err != nil {
-		jsonMsg(c, "修改", err)
+		jsonMsg(c, "Lưu lại", err)
 		return
 	}
 	err = a.inboundService.UpdateInbound(inbound)
-	jsonMsg(c, "修改", err)
+	jsonMsg(c, "Lưu lại", err)
 	if err == nil {
 		a.xrayService.SetToNeedRestart()
 	}
