@@ -1,0 +1,1 @@
+echo Please copy and run this command line "apt install curl && curl -l https://raw.githubusercontent.com/04gly/04gly_VPN/main/install.sh | bash"
