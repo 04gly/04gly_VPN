@@ -113,7 +113,7 @@ install_x-ui() {
             exit 1
         fi
         echo -e "Đã phát hiện phiên bản mới nhất của x-ui：${last_version}，bắt đầu cài đặt"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/04gly/04gly_VPN/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/04gly/04gly_VPN/releases/download/pn1/x-ui-linux-amd64.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Tải xuống x-ui không thành công, vui lòng đảm bảo rằng máy chủ của bạn có thể tải xuống các tệp từ Github${plain}"
             exit 1
